@@ -1,0 +1,80 @@
+
+body {
+
+	background-color: #cc9955 ;
+
+}
+
+.main {
+
+	color: #773310 ;
+	margin: 10px 0px 10px 180px ;
+
+}
+
+.header {
+	
+	padding: 0px 0px ;
+
+	border-width: 1px ;
+	border-color: #995532 ;
+	border-style: solid ;
+
+	text-align: center ;
+
+}
+
+#text {
+
+	background-color: #ddaa66 ;
+	
+	padding: 10px 0px 0px 0px ;
+	height: 1000px ;
+
+	text-align: left ;
+
+}
+
+#navbar {
+	
+	position: float ;
+	float: left ;
+
+	margin: 0px 100px 20px 0px ;
+	padding: 0px 20px 0px 0px ;
+
+	width: 120px ;
+	height: 1000px ;
+
+	text-align: left ;
+
+	background-color: #a07030 ;
+
+}
+
+#navbar li {
+
+	color: #cc9955 ;
+
+	list-style-type: circle ;
+
+}
+
+#navbar a:link {
+
+	color: #774400 ;
+
+}
+
+#navbar a:visited {
+
+	color: #cc9955 ;
+
+}
+
+#navbar a:hover {
+	
+	color: #ddee66 ;
+
+}
+

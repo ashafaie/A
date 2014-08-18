@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<title> {% block title %}{% endblock %} </title>
+		<link href="{{ url_for('static',filename='templates/base.css') }}"
+												rel="stylesheet" media="screen"/>
+
+	</head>
+
+	<body>
+	
+		<div id="navbar">
+
+			<ul>
+				<li/><a href="{{ url_for ('index') }}">Main Page</a>
+				<li/><a href="{{ url_for ('login') }}">Login</a>
+				<li/><a href="{{ url_for ('register') }}">Register</a>
+			</ul>
+
+		</div>
+
+		<div class= "main header">
+
+			<h1>{% block header %}{% endblock %}</h1>
+
+		</div>
+
+		<div id= "text" class= "main">
+
+			<p>{% block text %}{% endblock %}</p>
+
+		</div>
+		
+	</body>
+
+</html>
+
