@@ -2,6 +2,6 @@
 {% extends "base.html" %}
 
 	{% block title %} Welcome {% endblock %}
-	{% block header %} Welcome! {% endblock %}
-	{% block text %} Login or Register. {% endblock %}
+	{% block header %}Welcome{% if g.user %} {{g.user}}{% endif %}!{% endblock %}
+	{% block text %} {% if not g.user %}Login or Register.{% endif %}{% endblock %}
 

@@ -17,8 +17,12 @@
 
 			<ul>
 				<li/><a href="{{ url_for ('index') }}">Main Page</a>
-				<li/><a href="{{ url_for ('login') }}">Login</a>
-				<li/><a href="{{ url_for ('register') }}">Register</a>
+				{% if not g.user %}
+					<li/><a href="{{ url_for ('login') }}">Login</a>
+					<li/><a href="{{ url_for ('register') }}">Register</a>
+				{% else %}
+					<li/><a href="{{ url_for ('logout') }}">Logout</a>
+				{% endif %}
 			</ul>
 
 		</div>
