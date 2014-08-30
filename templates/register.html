@@ -5,5 +5,11 @@
 
 	{% block title %} Register {% endblock %}
 	{% block header %} Register {% endblock %}
-	{% block text %}{{ wtf.quick_form(registeration_form) }}{% endblock %}
+	{% block text %}
+		{{ wtf.quick_form(registeration_form) }}
+		{% if duplicate %}
+			<br>The selected username already exists.
+			<br>Please select another username.
+		{% endif %}
+	{% endblock %}
 

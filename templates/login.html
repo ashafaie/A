@@ -5,5 +5,11 @@
 
 	{% block title %} Login {% endblock %}
 	{% block header %} Login {% endblock %}
-	{% block text %}{{ wtf.quick_form(login_form) }}{% endblock %}
+	{% block text %}
+		{{ wtf.quick_form(login_form) }}
+		{% if not correct %}
+			<br>Username or password incorrect.
+			<br>Please try again.
+		{% endif %}
+	{% endblock %}
 
