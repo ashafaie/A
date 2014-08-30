@@ -3,6 +3,7 @@
 from flask import Flask, render_template, url_for, redirect, make_response
 from flask.ext.bootstrap import Bootstrap
 from flask.ext.sqlalchemy import SQLAlchemy
+import os
 
 app = Flask (__name__)
 

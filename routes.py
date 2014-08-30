@@ -1,5 +1,5 @@
 
-from appfile import *
+from appfile import app
 from forms import *
 
 @app.route ('/')
@@ -13,9 +13,5 @@ def login ():
 @app.route ('/user/register', methods=['GET','POST'])
 def register ():
 	registerform = RegisterationForm ()
-
-	if registerform.validate_on_submit():
-		
-
 	return render_template ('register.html', registeration_form = registerform)
 
