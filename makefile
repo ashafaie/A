@@ -1,4 +1,8 @@
 
+init: main.py
+	clear
+	python main.py db init
+
 run: main.py
 	clear
 	python main.py db upgrade
