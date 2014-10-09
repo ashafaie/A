@@ -9,11 +9,11 @@ run: main.py
 	python main.py runserver -h 0.0.0.0
 
 clean:
-	rm *.pyc
+	rm -f *.pyc
 	clear
 
 cleanall:
-	rm *.pyc
-	rm -r data.sqlite migrations
+	rm -f *.pyc
+	rm -f -r data.sqlite migrations
 	clear
 

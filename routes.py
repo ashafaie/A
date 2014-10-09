@@ -1,4 +1,5 @@
 
+from blueprints.index import *
 from appinit import app
 from bootstrapinit import bootstrap
 from sqlalchemyinit import *
@@ -8,9 +9,7 @@ from models import User
 from flask import session, g, render_template, url_for, redirect
 from werkzeug.security import generate_password_hash, check_password_hash
 
-@app.route ('/')
-def index ():
-	return render_template ('index.html')
+app.register_blueprint (index_blueprint)
 
 @app.route ('/user/login', methods=['GET','POST'])
 def login ():
@@ -21,8 +20,8 @@ def login ():
 			return render_template ('login.html', correct=False,
 												login_form = loginform)
 		elif (check_password_hash (User.query.filter_by
-								(username=loginform.username.data).first().password,
-														loginform.password.data)):
+                                                            (username=loginform.username.data).first().password,
+                                                                                                        loginform.password.data)):
 			session['username'] = loginform.username.data
 			return redirect (url_for('index'))
 		else:
