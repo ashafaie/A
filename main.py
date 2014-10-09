@@ -15,6 +15,6 @@ if __name__ == '__main__':
 	migrate = Migrate(app, db)
 	manager.add_command('db', MigrateCommand)
 	db.create_all()
-	app.run(debug=True)
-	#manager.run ()
+        app.run (debug=True)
+	manager.run ()
 

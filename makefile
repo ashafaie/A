@@ -9,11 +9,11 @@ run: main.py
 	python main.py runserver -h 0.0.0.0
 
 clean:
-	find . -name "*.pyc" -exec rm -i {} \;
+	find . -name "*.pyc" -exec rm -f {} \;
 	clear
 
 cleanall:
-	find . -name "*.pyc" -exec rm -i {} \;
+	find . -name "*.pyc" -exec rm -f {} \;
 	rm -f -r data.sqlite migrations
 	clear
 
